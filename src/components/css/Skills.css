@@ -1,0 +1,157 @@
+.skills-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .skills-title {
+    color: rgba(246, 127, 43, 1);
+    margin: 50px 0 15px 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+  }
+  
+  .skills-subtitle {
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  
+  .courses-section {
+    background-color: #fd6f00;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .courses-intro {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  
+  .courses-intro h2 {
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+  
+  .courses-intro p {
+    color: white;
+    font-size: 18px;
+  }
+  
+  .courses-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .course-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .course-card p {
+    margin-bottom: 15px;
+  }
+  
+  .course-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .course-card ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    background: rgba(233, 240, 244, 1);
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    color: rgba(0, 166, 19, 1);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 0;
+  }
+  
+  .download-btn i {
+    margin-left: 8px;
+    font-size: 20px;
+  }
+  
+  .download-btn:hover {
+    color: rgba(0, 140, 16, 1);
+  }
+  
+  .course-image {
+    width: 100%;
+    height: auto;
+    max-height: 177px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+  
+  @media (min-width: 768px) {
+    .skills-title {
+      font-size: 32px;
+    }
+  
+    .courses-section {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    .courses-intro {
+      flex: 1;
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  
+    .courses-cards {
+      flex: 2;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .skills-title {
+      font-size: 35px;
+    }
+  
+    .courses-intro h2 {
+      font-size: 40px;
+    }
+  
+    .course-card {
+      flex: 0 1 calc(50% - 20px);
+    }
+  }

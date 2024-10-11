@@ -1,11 +1,17 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HeadStart from './components/HeadStart';
 import Skills from './components/Skills';
+
 import TextSection from './components/TextSection'; 
 import ImageSection from './components/ImageSection'; 
 import EnrollForm from './components/EnrollForm'; 
 import { useState, useEffect } from 'react'; 
+
+import Courses from './components/Courses';
+import Footer from './components/Footer';
+import ContactForm from './components/Contact';
 
 function App() {
   const texts = [

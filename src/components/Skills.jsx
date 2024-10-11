@@ -1,5 +1,5 @@
 import React from "react";
-import './Skills.css';
+import '../components/css/Skills.css';
 
 const Skills = () => {
   const handleDownload = () => {
