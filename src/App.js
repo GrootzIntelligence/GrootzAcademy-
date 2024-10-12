@@ -12,6 +12,7 @@ import { useState, useEffect } from 'react';
 import Courses from './components/Courses';
 import Footer from './components/Footer';
 import ContactForm from './components/Contact';
+import Single from './components/Single';
 
 function App() {
   const texts = [
@@ -36,6 +37,7 @@ function App() {
   }, [texts.length]);
 
   return (
+<<<<<<< Updated upstream
     <div>
       <div className="container">
         <TextSection
@@ -48,6 +50,35 @@ function App() {
           imgSrc={images[currentIndex]}
           altText="Career Building Illustration"
         />
+=======
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Skills/>
+              <HeadStart />
+              <ContactForm />
+             <Footer />
+            </>
+          } />
+          <Route path="/courses" element={
+            <>
+            <Courses />
+            <ContactForm />
+             <Footer /> 
+            </> 
+            } />
+            <Route path="/single" element={
+            <>
+            <Single />
+              <ContactForm  />
+             <Footer />
+            </>
+          } />
+        </Routes>
+>>>>>>> Stashed changes
       </div>
       <Navbar />
       <Skills />
