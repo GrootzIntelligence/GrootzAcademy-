@@ -38,7 +38,7 @@ const Navbar = () => {
         {!isMobile && (
           <div className="menu">
             <Link to="/courses" className="menu-item">Courses<span className="underline"></span></ Link>
-            <Link to="/single" className="menu-item">Free Study Material<span className="underline"></span></Link>
+            <Link to="/" className="menu-item">Free Study Material<span className="underline"></span></Link>
           </div>
         )}
       </div>

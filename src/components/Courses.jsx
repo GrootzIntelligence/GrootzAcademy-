@@ -86,7 +86,7 @@ const Features = () => {
   );
 };
 
-const CourseSection = ({ title, description, imageUrl }) => (
+const CourseSection = ({ title, description, imageUrl, applyUrl }) => (
   <div className="flex flex-col md:flex-row bg-white p-4 md:p-8 gap-8">
     <div className="w-full md:w-1/2 flex flex-col justify-center">
       <h1 className="text-3xl md:text-4xl font-bold mb-4">
@@ -95,9 +95,9 @@ const CourseSection = ({ title, description, imageUrl }) => (
       <p className="text-gray-700 mb-6 text-sm md:text-base">
         {description}
       </p>
-      <button className="bg-orange-500 text-white font-semibold py-2 px-6 rounded-full self-start hover:bg-orange-600 transition-colors text-sm md:text-base">
+      <Link to={applyUrl} className="bg-orange-500 text-white font-semibold py-2 px-6 rounded-full self-start hover:bg-orange-600 transition-colors text-sm md:text-base">
         Apply Now
-      </button>
+      </Link>
     </div>
     <div className="w-full md:w-1/2 mt-6 md:mt-0">
       <img
@@ -151,6 +151,7 @@ const CoursesPage = () => {
       <CourseSection
         title="UI/UX Design"
         description="Our comprehensive UI/UX design course covers essential tools like Adobe Photoshop, Illustrator, XD, and InDesign, alongside training in design philosophy and process. Learn through hybrid classes and kickstart your career with our placement services."
+        applyUrl="/single"
         imageUrl="/laptop.png"
       />
 
@@ -160,12 +161,14 @@ const CoursesPage = () => {
       <CourseSection
         title="Graphic Design"
         description="Master the art of visual communication with our Graphic Design course. From branding to digital illustration, learn to create impactful designs using industry-standard tools and techniques."
+        applyUrl="/single"
         imageUrl="/laptop.png"
       />
         <Features />
 
       <CourseSection
         title="Web Development"
+        applyUrl="/single"
         description="Dive into the world of web development. Learn to code, design, and deploy responsive websites and web applications using the latest technologies and best practices in the industry."
         imageUrl="/laptop.png"
       />

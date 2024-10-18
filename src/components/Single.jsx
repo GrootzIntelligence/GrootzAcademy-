@@ -28,7 +28,7 @@ const CoursesPage = () => {
       <div className="flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 bg-orange-500 p-4 md:p-8 flex flex-col">
           <Link
-            to="/"
+            to="/courses"
             className="inline-flex items-center px-3 py-1 mb-4 text-white"
           >
             <ArrowLeft className="mr-2" size={16} />

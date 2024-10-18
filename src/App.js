@@ -1,20 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Navbar from './components/Navbar';
-import HeadStart from './components/HeadStart';
-import Skills from './components/Skills';
-
-import TextSection from './components/TextSection'; 
-import ImageSection from './components/ImageSection'; 
-import EnrollForm from './components/EnrollForm'; 
-import { useState, useEffect } from 'react'; 
-
-import Courses from './components/Courses';
-import Footer from './components/Footer';
-import ContactForm from './components/Contact';
-import Single from './components/Single';
-import CoursesSlider from './components/CoursesSlide';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import HeadStart from "./components/HeadStart";
+import Skills from "./components/Skills";
+import HeroSection from "./components/HeroSection";
+import EnrollForm from "./components/EnrollForm";
+import Courses from "./components/Courses";
+import Footer from "./components/Footer";
+import ContactForm from "./components/Contact";
+import Single from "./components/Single";
+import CoursesSlider from "./components/CoursesSlide";
 
 function App() {
   const texts = [
@@ -22,10 +18,7 @@ function App() {
     '<span class="black-text">Thrive the</span> Creativity<br><span class="black-text">Triple the</span> Success',
   ];
 
-  const images = [
-    "image 2.png",
-    "image.png",
-  ];
+  const images = ["image 2.png", "image.png"];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -37,48 +30,52 @@ function App() {
   }, [texts.length]);
 
   return (
-<<<<<<< Updated upstream
-    <div>
-      <div className="container">
-        <TextSection
-          heading={texts[currentIndex]}
-          tech="Technical and Non - Technical Courses, Study Material"
-          buttonLink="#"
-          buttonText="Book Now"
-        />
-        <ImageSection
-          imgSrc={images[currentIndex]}
-          altText="Career Building Illustration"
-        />
-=======
     <Router>
       <div>
         <Navbar />
         <Routes>
-          <Route path="/" element={
-            <>
-              <Skills/>
-              <HeadStart />
-              <ContactForm />
-             <Footer />
-            </>
-          } />
-          <Route path="/courses" element={
-            <>
-            <Courses />
-            <ContactForm />
-             <Footer /> 
-            </> 
-            } />
-            <Route path="/single" element={
-            <>
-            <Single />
-              <ContactForm  />
-             <Footer />
-            </>
-          } />
+          <Route
+            path="/"
+            element={
+              <>
+                <HeroSection
+                  heading={texts[currentIndex]}
+                  tech="Technical and Non - Technical Courses, Study Material"
+                  buttonLink="#"
+                  buttonText="Book Now"
+                  imgSrc={images[currentIndex]}
+                  altText="Career Building Illustration"
+                />
+                <Skills />
+                <HeadStart />
+                <CoursesSlider />
+                <EnrollForm />
+                <ContactForm />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/courses"
+            element={
+              <>
+                <Courses />
+                <ContactForm />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/single"
+            element={
+              <>
+                <Single />
+                <ContactForm />
+                <Footer />
+              </>
+            }
+          />
         </Routes>
->>>>>>> Stashed changes
       </div>
     </Router>
   );
