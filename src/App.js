@@ -4,12 +4,17 @@ import './App.css';
 import Navbar from './components/Navbar';
 import HeadStart from './components/HeadStart';
 import Skills from './components/Skills';
-import HeroSection from './components/HeroSection';
-import EnrollmentComponent from './components/EnrollForm';
+
+import TextSection from './components/TextSection'; 
+import ImageSection from './components/ImageSection'; 
+import EnrollForm from './components/EnrollForm'; 
+import { useState, useEffect } from 'react'; 
+
 import Courses from './components/Courses';
 import Footer from './components/Footer';
 import ContactForm from './components/Contact';
 import Single from './components/Single';
+import CoursesSlider from './components/CoursesSlide';
 
 function App() {
   const texts = [
@@ -32,42 +37,48 @@ function App() {
   }, [texts.length]);
 
   return (
+<<<<<<< Updated upstream
+    <div>
+      <div className="container">
+        <TextSection
+          heading={texts[currentIndex]}
+          tech="Technical and Non - Technical Courses, Study Material"
+          buttonLink="#"
+          buttonText="Book Now"
+        />
+        <ImageSection
+          imgSrc={images[currentIndex]}
+          altText="Career Building Illustration"
+        />
+=======
     <Router>
-      <div className="app-container">
+      <div>
         <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={
-              <>
-                <HeroSection
-                  heading={texts[currentIndex]}
-                  tech="Technical and Non - Technical Courses, Study Material"
-                  buttonLink="#"
-                  buttonText="Book Now"
-                  imgSrc={images[currentIndex]}
-                  altText="Career Building Illustration"
-                />
-                <Skills />
-                <HeadStart />
-                <EnrollmentComponent />
-                <ContactForm />
-              </>
-            } />
-            <Route path="/courses" element={
-              <>
-                <Courses />
-                <ContactForm />
-              </>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Skills/>
+              <HeadStart />
+              <ContactForm />
+             <Footer />
+            </>
+          } />
+          <Route path="/courses" element={
+            <>
+            <Courses />
+            <ContactForm />
+             <Footer /> 
+            </> 
             } />
             <Route path="/single" element={
-              <>
-                <Single />
-                <ContactForm />
-              </>
-            } />
-          </Routes>
-        </main>
-        <Footer />
+            <>
+            <Single />
+              <ContactForm  />
+             <Footer />
+            </>
+          } />
+        </Routes>
+>>>>>>> Stashed changes
       </div>
     </Router>
   );
