@@ -1,14 +1,11 @@
-import './App.css';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css';
 import Navbar from './components/Navbar';
 import HeadStart from './components/HeadStart';
 import Skills from './components/Skills';
-
-import TextSection from './components/TextSection'; 
-import ImageSection from './components/ImageSection'; 
-import EnrollForm from './components/EnrollForm'; 
-import { useState, useEffect } from 'react'; 
-
+import HeroSection from './components/HeroSection';
+import EnrollmentComponent from './components/EnrollForm';
 import Courses from './components/Courses';
 import Footer from './components/Footer';
 import ContactForm from './components/Contact';
@@ -17,7 +14,7 @@ import Single from './components/Single';
 function App() {
   const texts = [
     'Flexible <span style="color: black;">Training Methods</span><br><span style="color: black;">Focused</span> Career Building',
-    '<span class="black-text">Thrive the</span> Creativity</span><br><span class="black-text">Triple the</span> Success',
+    '<span class="black-text">Thrive the</span> Creativity<br><span class="black-text">Triple the</span> Success',
   ];
 
   const images = [
@@ -25,66 +22,54 @@ function App() {
     "image.png",
   ];
 
-  
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
     }, 3000);
-
     return () => clearInterval(interval);
   }, [texts.length]);
 
   return (
-<<<<<<< Updated upstream
-    <div>
-      <div className="container">
-        <TextSection
-          heading={texts[currentIndex]}
-          tech="Technical and Non - Technical Courses, Study Material"
-          buttonLink="#"
-          buttonText="Book Now"
-        />
-        <ImageSection
-          imgSrc={images[currentIndex]}
-          altText="Career Building Illustration"
-        />
-=======
     <Router>
-      <div>
+      <div className="app-container">
         <Navbar />
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Skills/>
-              <HeadStart />
-              <ContactForm />
-             <Footer />
-            </>
-          } />
-          <Route path="/courses" element={
-            <>
-            <Courses />
-            <ContactForm />
-             <Footer /> 
-            </> 
+        <main>
+          <Routes>
+            <Route path="/" element={
+              <>
+                <HeroSection
+                  heading={texts[currentIndex]}
+                  tech="Technical and Non - Technical Courses, Study Material"
+                  buttonLink="#"
+                  buttonText="Book Now"
+                  imgSrc={images[currentIndex]}
+                  altText="Career Building Illustration"
+                />
+                <Skills />
+                <HeadStart />
+                <EnrollmentComponent />
+                <ContactForm />
+              </>
+            } />
+            <Route path="/courses" element={
+              <>
+                <Courses />
+                <ContactForm />
+              </>
             } />
             <Route path="/single" element={
-            <>
-            <Single />
-              <ContactForm  />
-             <Footer />
-            </>
-          } />
-        </Routes>
->>>>>>> Stashed changes
+              <>
+                <Single />
+                <ContactForm />
+              </>
+            } />
+          </Routes>
+        </main>
+        <Footer />
       </div>
-      <Navbar />
-      <Skills />
-      <HeadStart />
-      <EnrollForm />
-    </div>
+    </Router>
   );
 }
 

@@ -54,7 +54,7 @@ const Navbar = () => {
           </div>
           <button className="sign-up-btn">Sign Up</button>
           <div className="divider"></div>
-          <div className="search-bar">
+          <div className="search-bar w-auto">
             <FiSearch className="icon" />
             <input type="text" placeholder="search" className="search-input short" />
           </div>
@@ -62,8 +62,8 @@ const Navbar = () => {
       )}
       {isMobile && isOpen && (
         <div className="mobile-menu">
-          <a href="#" className="mobile-menu-item">Courses</a>
-          <a href="#" className="mobile-menu-item">Free Study Material</a>
+          <a href="/courses" className="mobile-menu-item">Courses</a>
+          <a href="/single" className="mobile-menu-item">Free Study Material</a>
           <div className="mobile-contact">
             <FiPhone className="icon" />
             <span>XXXXXXXXXX</span>
