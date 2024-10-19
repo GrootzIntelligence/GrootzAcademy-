@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import ContactForm from "./components/Contact";
 import Single from "./components/Single";
 import CoursesSlider from "./components/CoursesSlide";
+import GrootzAdv from "./components/GrootzAdv";
 
 function App() {
   const texts = [
@@ -47,6 +48,7 @@ function App() {
                   altText="Career Building Illustration"
                 />
                 <Skills />
+                <GrootzAdv />
                 <HeadStart />
                 <CoursesSlider />
                 <EnrollForm />
