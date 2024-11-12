@@ -12,6 +12,8 @@ import ContactForm from "./components/Contact";
 import Single from "./components/Single";
 import CoursesSlider from "./components/CoursesSlide";
 import GrootzAdv from "./components/GrootzAdv";
+import SignUp from "./components/SignUp";
+
 
 function App() {
   const texts = [
@@ -19,7 +21,7 @@ function App() {
     '<span class="black-text">Thrive the</span> Creativity<br><span class="black-text">Triple the</span> Success',
   ];
 
-  const images = ["image 2.png", "image.png"];
+  const images = ["image-2.png", "image-1.png"];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -48,6 +50,7 @@ function App() {
                   altText="Career Building Illustration"
                 />
                 <Skills />
+                <img src="image.png" alt="career"></img>
                 <GrootzAdv />
                 <HeadStart />
                 <CoursesSlider />
@@ -74,6 +77,14 @@ function App() {
                 <Single />
                 <ContactForm />
                 <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/signup"
+            element={
+              <>
+                <SignUp />
               </>
             }
           />

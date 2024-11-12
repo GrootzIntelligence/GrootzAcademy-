@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function HeroSection({ heading, tech, buttonLink, buttonText, imgSrc, altText }) {
   return (
-    <section className="hero">
+    <section className="hero mt-5">
       <motion.div 
         className="text-section"
         initial={{ opacity: 0, x: -50 }}

@@ -52,7 +52,7 @@ const Navbar = () => {
             <FiPhone className="icon" />
             <span>XXXXXXXXXX</span>
           </div>
-          <button className="sign-up-btn">Sign Up</button>
+          <Link to="/signup" className='sign-up-btn'>Sign Up</Link>
           <div className="divider"></div>
           <div className="search-bar w-auto">
             <FiSearch className="icon" />
